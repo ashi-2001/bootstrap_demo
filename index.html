@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashi - Web Developer + UX Designer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTn7O7FzRH1xBNz3DGzTv6l12J8TjpaVxuxk76iJzS3xUBlmZozAkTV41K4lQ9+SEc5oJoVfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .bg-custom {
+      background: linear-gradient(45deg, #2a2a72, #009ffd);
+      color: white;
+    }
+    .card-img-custom {
+      border-radius: 15px;
+    }
+    .navbar-nav .nav-link {
+      color: white;
+      margin-right: 15px;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .navbar-nav .nav-link:hover {
+      transform: scale(1.1);
+      color: #c0a3ff;
+    }
+    .btn-custom {
+      background-color: #563d7c;
+      border-color: #563d7c;
+      color: white;
+      border-radius: 30px;
+      padding: 10px 20px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .btn-custom:hover {
+      background-color: #6f42c1;
+      transform: scale(1.1);
+    }
+    .dropdown-menu {
+      background-color: #2a2a72;
+      border: none;
+    }
+    .dropdown-item {
+      color: white;
+      transition: background-color 0.3s;
+    }
+    .dropdown-item:hover {
+      background-color: #009ffd;
+    }
+    .social-icons li a{
+      color: rgb(216, 24, 24);
+      /* transition: transform 0.3s, color 0.3s; */
+      height: 30px;
+    }
+    .social-icons a:hover {
+      color: #c0a3ff;
+      transform: scale(1.2);
+    }
+    .navbar-brand .a{
+        color: cornsilk;
+    }
+    .navbar-brand img {
+      max-height: 5px;
+    }
+    .navbar navbar-expand-lg bg-secondary sticky-top {
+        height: 5px;
+    }
+    .service-card {
+      background-color: #1c1c1c;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .service-header {
+      background-color: #6c63ff;
+      color: #fff;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+    .service-content {
+      padding: 1rem;
+    }
+    .skills-section {
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 3rem 0;
+    }
+    .skills-card {
+      background-color: #282828;
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .skills-card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+    .skills-card h5 {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+    .recent-works-section {
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 3rem 0;
+    }
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .filter-buttons button {
+      background-color: #6c63ff;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 20px;
+      font-size: 1rem;
+    }
+    .filter-buttons button.active {
+      background-color: #4c4c4c;
+    }
+    .works-item {
+      margin-bottom: 2rem;
+    }
+    .works-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    body {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.recent-blogs h2 {
+    margin-bottom: 20px;
+}
+
+.card-img-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 0.875rem;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+  </style>
+</head>
+<body class="bg-custom">
+
+  <!-- Main Section -->
+  <section>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-secondary sticky-top ">
+      <div class="container">
+        <a  href="mailto:parasharashi02@gmail.com"><img src="images/logo.webp" alt="Logo" class="navbar-brand" >mail@parasharashi02.com</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="#">Subitem 1</a></li>
+                <li><a class="dropdown-item" href="#">Subitem 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+              <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                <li><a class="dropdown-item" href="#">Subitem 1</a></li>
+                <li><a class="dropdown-item" href="#">Subitem 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-custom" href="#">Hire Me!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+      <div class="row align-items-center vh-100">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold">I am Ashi</h1>
+          <h2 class="fw-bold" style="color: #c0a3ff;">Web Developer + UX Designer</h2>
+          <p class="lead">I break down complex user experience problems to create integrity-focused solutions that connect billions of people.</p>
+          <div class="social-icons d-flex">
+            <ul>
+            <li><a href="https://twitter.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+            </svg></a></li>
+            <li><a href="https://linkedin.com" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.498 4.498 0 0 1 7.965 13a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242.63 0 1.46-.118 2.152-.242a26.58 26.58 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434zm6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434z"/></svg></a></li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-custom btn-lg mt-3">Hire Me!</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="card bg-dark border-0">
+            <img src="images/girl.png" class="card-img card-img-custom" alt="Gerold">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- quality services -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center text-light mb-5">My Quality Services</h2>
+      <div class="row">
+          <div class="service-card">
+            <div class="service-header">
+              <h3>01 Branding Design</h3>
+            </div>
+            <div class="service-content">
+              <p>I break down complex user experience problems to create integrity-focused solutions that connect billions of people.</p>
+            </div>
+          </div>
+      
+        
+          <div class="service-card">
+            <div class="service-header">
+              <h3>02 Web Design</h3>
+            </div>
+            <div class="service-content">
+              <p>I break down complex user experience problems to create integrity-focused solutions that connect billions of people.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-header">
+              <h3>03 UI/UX Design</h3>
+            </div>
+            <div class="service-content">
+              <p>I break down complex user experience problems to create integrity-focused solutions that connect billions of people.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+<!-- recent works -->
+  <section class="recent-works-section">
+    <div class="container">
+      <h2 class="text-center text-light mb-4">My Recent Works</h2>
+      <p class="text-center text-light mb-5">We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.</p>
+      <div class="filter-buttons mb-5">
+        <button class="active">All</button>
+        <button>UX/UI</button>
+        <button>Branding</button>
+        <button>Apps</button>
+      </div>
+      <div class="row">
+        <div class="col-md-3 works-item">
+          <img src="path/to/image1.jpg" alt="Project 1">
+        </div>
+        <div class="col-md-3 works-item">
+          <img src="path/to/image2.jpg" alt="Project 2">
+        </div>
+        <div class="col-md-3 works-item">
+          <img src="path/to/image3.jpg" alt="Project 3">
+        </div>
+        <div class="col-md-3 works-item">
+          <img src="path/to/image4.jpg" alt="Project 4">
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- my skills -->
+  <section class="skills-section">
+    <div class="container">
+      <h2 class="text-center text-light mb-5">My Skills</h2>
+      <p class="text-center text-light mb-5">We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.</p>
+      <div class="row">
+        <div class="col-md-2 offset-md-1">
+          <div class="skills-card">
+            <img src="path/to/figma.svg" alt="Figma">
+            <h5>Figma</h5>
+            <p>92%</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="skills-card">
+            <img src="path/to/sketch.svg" alt="Sketch">
+            <h5>Sketch</h5>
+            <p>80%</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="skills-card">
+            <img src="path/to/xd.svg" alt="Adobe XD">
+            <h5>XD</h5>
+            <p>85%</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="skills-card">
+            <img src="path/to/wordpress.svg" alt="WordPress">
+            <h5>WordPress</h5>
+            <p>99%</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="skills-card">
+            <img src="path/to/react.svg" alt="React">
+            <h5>React</h5>
+            <p>89%</p>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- recent blogs -->
+  <section class="recent-blogs py-5">
+    <div class="container">
+        <h2 class="text-white">Recent Blogs</h2>
+        <p class="text-white">We put your ideas and wishes in the form of a unique web project that inspires you and your customers.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-dark text-white">
+                    <img src="image1.jpg" class="card-img" alt="Blog 1">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Top 10 UI UX Design Tips</h5>
+                        <p class="card-text">Nov 01, 2022 | Comment (0)</p>
+                        <span class="badge badge-primary">TUTORIAL</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white">
+                        <img src="image2.jpg" class="card-img" alt="Blog 2">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">App Development Guides</h5>
+                            <p class="card-text">Oct 01, 2022 | Comment (0)</p>
+                            <span class="badge badge-success">TIPS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white">
+                      <img src="image3.jpg" class="card-img" alt="Blog 3">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Learn Graphic Design Free</h5>
+                            <p class="card-text">Dec 01, 2022 | Comment (0)</p>
+                            <span class="badge badge-info">FREEBIES</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class = "footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="footer-logo-box">
+              <a href="#">
+                <img src = "" alt>
+              </a>
+            </div>
+            <div class="footer-menu">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#">
+                      "services"
+                    </a>
+                  </li>
+                  <li>
+                    <a href = "#">
+                      "portfolio"
+                    </a>
+                  </li>
+                  <li>
+                    <a href = "#">
+                      "contact"
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="copy-text">
+              <p>
+                "2024 All rights reserved by"
+                <a href = "#" target="_blank">ThemeJunction</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
